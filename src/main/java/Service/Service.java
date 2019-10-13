@@ -57,7 +57,7 @@ public class Service {
                 Service_User.acceptMessage(obj.getJSONObject("user"));
                 // передать ответ и данные в сервисы юзера
                 // если ошибка то вывести ответ на экран
-                break;
+                break;        
             case NAME_OBJECT.costs:
                 switch (code) {
                     case NAME_OPERATION.create:
