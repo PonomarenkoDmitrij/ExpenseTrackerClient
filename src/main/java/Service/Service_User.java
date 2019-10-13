@@ -6,13 +6,14 @@ import Main.Main;
 import ObjectData.*;
 import org.json.JSONObject;
 import Service.Service.*;
+import sun.print.resources.serviceui_zh_TW;
 
 public class Service_User {
 
     static Verification_Contr vc;
-    Users user;
+    static Users user;
 
-    private int value;
+    private static int value;
     private static JSONObject obj;
     private boolean result;
 
@@ -21,7 +22,7 @@ public class Service_User {
     }
 
     // get message from server
-    public void acceptMessage(JSONObject jobj) {
+    public static void acceptMessage(JSONObject jobj) {
         obj = new JSONObject();
         value = jobj.getInt("code");
         if (jobj.has("user")) {
@@ -45,7 +46,7 @@ public class Service_User {
                 createMessage(user, NAME_OPERATION.show);
                 break;
             case unique_numb.verification:
-                createMessage(user, unique_numb.verification);
+                Service.getVer().next_window();
                 break;
         }
     }

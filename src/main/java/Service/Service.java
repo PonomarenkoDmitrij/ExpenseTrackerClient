@@ -8,6 +8,7 @@ import org.json.JSONObject;
 
 public class Service {
 
+
     private static Verification_Contr ver;
     private static AddCosts add;
 
@@ -36,7 +37,7 @@ public class Service {
         switch (value) {
             case NAME_OBJECT.user:
                 Service_User s = new Service_User();
-                s.getResult(obj);
+                s.acceptMessage(obj);
                 break;
             case NAME_OBJECT.costs:
                 Service_Costs costs = new Service_Costs();
@@ -53,16 +54,7 @@ public class Service {
         boolean result = obj.getBoolean("result");
         switch (object) {
             case NAME_OBJECT.user:
-                switch (code) {
-                    case NAME_OPERATION.create:
-                    case NAME_OPERATION.delete:
-                    case NAME_OPERATION.update:
-                        break;
-                    case Service_User.unique_numb.verification:
-                        if (result) ver.next_window();
-                        else ver.answer(result, code);
-                        break;
-                }
+                Service_User.acceptMessage(obj.getJSONObject("user"));
                 // передать ответ и данные в сервисы юзера
                 // если ошибка то вывести ответ на экран
                 break;
@@ -78,5 +70,12 @@ public class Service {
     public static void frames(Object frame) {
         Class<?> obj = frame.getClass();
         if (obj == Verification_Contr.class) ver = (Verification_Contr) frame;
+    }
+    public static Verification_Contr getVer() {
+        return ver;
+    }
+
+    public static AddCosts getAdd() {
+        return add;
     }
 }

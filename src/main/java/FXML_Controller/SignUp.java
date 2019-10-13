@@ -33,6 +33,7 @@ public class SignUp implements Controller {
 
     @FXML
     public void initialize() {
+        Service.frames(SignUp.this);
         label_error.setVisible(false);
     }
 
@@ -45,7 +46,7 @@ public class SignUp implements Controller {
                             -1, full_name.getText(), email.getText(), login.getText(), password1.getText(), Date.valueOf(birthday.getValue())
                     );
                     Client_Socket.socket();
-                    Service_User.setObject(u, Service.NAME_OPERATION.create);
+                    Service_User.createMessage(u, Service.NAME_OPERATION.create);
                 } else {
                     // определять пустые поля
                     //            error();

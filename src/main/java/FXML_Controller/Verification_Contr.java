@@ -11,10 +11,6 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import ObjectData.*;
 
-import javafx.scene.layout.Pane;
-import org.apache.log4j.Logger;
-
-
 public class Verification_Contr implements Controller {
 
     Users user;
@@ -37,7 +33,7 @@ public class Verification_Contr implements Controller {
             case "signIn":
                 user = new Users(-1, null, null, login.getText(), password.getText().toString(), null);
                 Client_Socket.socket();
-                Service_User.setObject(user, Service_User.unique_numb.verification);
+                Service_User.createMessage(user, Service_User.unique_numb.verification);
                 break;
             case "signUp": // transition to registration
                 Main.frames.frames(Frames.NumbFrame.SignUp);
