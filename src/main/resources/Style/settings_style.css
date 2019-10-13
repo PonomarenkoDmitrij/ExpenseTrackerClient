@@ -1,0 +1,52 @@
+.tab-pane .tab-header-area .tab-header-background {
+    -fx-opacity: 0;
+}
+
+.tab-pane {
+    -fx-tab-min-width: 170px;
+}
+
+.tab {
+    -fx-background-insets: 0 1 0 1, 0, 0;
+}
+
+.tab-pane .tab {
+    -fx-background-color: #e6e6e6;
+
+}
+
+.tab-pane .tab:selected {
+    -fx-background-color: #3c3c3c;
+}
+
+.tab .tab-label {
+    -fx-alignment: CENTER;
+    -fx-text-fill: #828282;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+}
+
+.tab:selected .tab-label {
+    -fx-alignment: CENTER;
+    -fx-text-fill: #96b946;
+}
+
+.button {
+    -fx-pref-width: 110;
+    -fx-pref-height: 45;
+    -fx-background-radius: 15px;
+    -fx-background-color: rgba(255, 255, 255, 0.4);
+}
+
+.text-field, .password-field {
+    -fx-pref-height: 37;
+    -fx-pref-width: 220;
+    -fx-background-radius: 13px;
+}
+
+.label {
+
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 18px;
+}

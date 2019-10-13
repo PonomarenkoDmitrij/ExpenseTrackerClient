@@ -1,0 +1,41 @@
+.anchor-pane{
+    -fx-background-color:  #A5D5FF;
+}
+.anchor-pane > .left-pane{
+    -fx-background-color: #225174;
+}
+.left-pane > .button{
+    -fx-pref-height: 62px;
+    -fx-font-size: 18px;
+}
+.up-pane #avatar{
+    -fx-border-style: solid;
+    -fx-border-color: rgba(255,255,255,0.2);
+    -fx-background-color:  rgba(255,255,255,0.03);
+    -fx-background-radius: 7em;
+    -fx-border-radius: 7em;
+    -fx-min-height: 25px;
+    -fx-min-width: 25px;
+    -fx-max-height: 25px;
+    -fx-max-width: 25px;
+}
+.anchor-pane > .up-pane{
+    -fx-background-color: #225174;
+}
+.left-pane > .button{
+    -fx-background-color:  rgba(255,255,255,0.03);
+    -fx-text-fill: #FCFEFC;
+    -fx-border-style: solid;
+    -fx-border-color: rgba(255,255,255,0.2);
+}
+.general-anchor > .button , .choice-box{
+     -fx-background-radius: 15px;
+     -fx-background-color: rgba(49, 69, 116, 0.2);
+     -fx-border-color: rgba(255,255,255,0.2);
+     -fx-border-style: solid;
+     -fx-background-radius: 7em;
+     -fx-border-radius: 7em;
+ }
+.data-anchor{
+    -fx-background-color: rgba(255, 191, 217, 0);
+}

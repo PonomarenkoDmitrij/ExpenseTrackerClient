@@ -1,0 +1,21 @@
+.tab-pane{
+    -fx-background-color:  #A5D5FF;
+}
+.button{
+    -fx-pref-width: 120;
+    -fx-pref-height: 43;
+    -fx-background-radius: 15px;
+    -fx-background-color:  rgba(255,255,255,0.4);
+}
+.text-field,.password-field{
+    -fx-pref-height: 37;
+    -fx-pref-width: 360;
+    -fx-background-radius: 13px;
+}
+.label{
+    -fx-alignment: center;
+}
+.label-error{
+    -fx-alignment: center;
+    -fx-text-fill: red;
+}

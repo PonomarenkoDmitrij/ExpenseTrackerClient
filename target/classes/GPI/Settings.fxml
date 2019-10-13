@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="687.0" prefWidth="688.0" xmlns="http://javafx.com/javafx/8.0.181" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FXML_Controller.Settings">
+   <children>
+      <TabPane fx:id="tab_pane" prefHeight="687.0" prefWidth="688.0" stylesheets="@../Style/settings_style.css" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Account settings">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="452.0" prefWidth="554.0" stylesheets="@../Style/settings_style.css">
+                     <children>
+                        <PasswordField layoutX="405.0" layoutY="148.0" prefHeight="30.0" prefWidth="200.0" promptText="New password" />
+                        <TextField layoutX="54.0" layoutY="148.0" prefHeight="30.0" prefWidth="200.0" promptText="Login" />
+                        <TextField layoutX="54.0" layoutY="73.0" prefHeight="30.0" prefWidth="200.0" promptText="Full Name" />
+                        <TextField layoutX="405.0" layoutY="73.0" prefHeight="30.0" prefWidth="200.0" promptText="E-mail" />
+                        <Separator layoutY="223.0" prefHeight="8.0" prefWidth="688.0" />
+                        <Label layoutX="59.0" layoutY="14.0" prefHeight="32.0" prefWidth="225.0" text="Account settings">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="48.0" layoutY="244.0" prefHeight="30.0" prefWidth="201.0" text="Supposed costs">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField layoutX="54.0" layoutY="310.0" prefHeight="30.0" prefWidth="200.0" promptText="1 day expenses" />
+                        <TextField layoutX="405.0" layoutY="310.0" prefHeight="30.0" prefWidth="200.0" promptText="7 day expenses" />
+                        <TextField layoutX="54.0" layoutY="391.0" prefHeight="30.0" prefWidth="200.0" promptText="Month expenses" />
+                        <Button fx:id="setting_save" layoutX="94.0" layoutY="467.0" mnemonicParsing="false" onAction="#click" prefHeight="42.0" prefWidth="134.0" text="Save" />
+                        <Button fx:id="setting_cancel" layoutX="477.0" layoutY="467.0" mnemonicParsing="false" onAction="#click" prefHeight="42.0" prefWidth="134.0" text="Cancel" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="General settings">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

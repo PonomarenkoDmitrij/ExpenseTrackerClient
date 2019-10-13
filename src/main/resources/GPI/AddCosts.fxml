@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="437.0" prefWidth="480.0" styleClass="tab-pane" stylesheets="@../Style/add_costs_style.css" xmlns="http://javafx.com/javafx/8.0.181" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FXML_Controller.AddCosts">
+   <children>
+      <Button fx:id="add" layoutX="48.0" layoutY="368.0" mnemonicParsing="false" onAction="#click" prefHeight="34.0" prefWidth="96.0" text="Add">
+         <graphic>
+            <ImageView fitHeight="18.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Icons/plus.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="back" layoutX="278.0" layoutY="368.0" mnemonicParsing="false" onAction="#click" prefHeight="34.0" prefWidth="96.0" text="Back">
+         <graphic>
+            <ImageView fitHeight="23.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Icons/back.jpg" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <TextField fx:id="total_money" layoutX="271.0" layoutY="40.0" prefHeight="26.0" prefWidth="159.0" />
+      <Label layoutX="23.0" layoutY="42.0" prefHeight="33.0" prefWidth="194.0" text="Total amount of money:">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="23.0" layoutY="101.0" prefHeight="34.0" prefWidth="170.0" text="Travel expenses:">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="travel" layoutX="270.0" layoutY="99.0" prefHeight="26.0" prefWidth="158.0" />
+      <Label layoutX="23.0" layoutY="168.0" prefHeight="34.0" prefWidth="170.0" text="Food expenses:">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="food" layoutX="270.0" layoutY="167.0" prefHeight="26.0" prefWidth="158.0" />
+      <Label layoutX="23.0" layoutY="228.0" prefHeight="34.0" prefWidth="170.0" text="Clothes expenses:">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="clothes" layoutX="269.0" layoutY="227.0" prefHeight="26.0" prefWidth="158.0" />
+      <Label layoutX="23.0" layoutY="290.0" prefHeight="34.0" prefWidth="170.0" text="Other expenses:">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="other" layoutX="270.0" layoutY="289.0" prefHeight="26.0" prefWidth="158.0" />
+   </children>
+</AnchorPane>
