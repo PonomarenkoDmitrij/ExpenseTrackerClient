@@ -54,10 +54,10 @@ public class Service {
         boolean result = obj.getBoolean("result");
         switch (object) {
             case NAME_OBJECT.user:
-                Service_User.acceptMessage(obj.getJSONObject("user"));
+                Service_User.acceptMessage(obj);
                 // передать ответ и данные в сервисы юзера
                 // если ошибка то вывести ответ на экран
-                break;        
+                break;
             case NAME_OBJECT.costs:
                 switch (code) {
                     case NAME_OPERATION.create:

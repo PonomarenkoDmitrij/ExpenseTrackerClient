@@ -1,20 +1,16 @@
 package Service;
 
 import FXML_Controller.Verification_Contr;
-import Main.Client_Socket;
 import Main.Main;
 import ObjectData.*;
 import org.json.JSONObject;
 import Service.Service.*;
-import sun.print.resources.serviceui_zh_TW;
 
-public class Service_User {
+public class Service_User extends Service_Abs {
 
     static Verification_Contr vc;
     static Users user;
 
-    private static int value;
-    private static JSONObject obj;
     private boolean result;
 
     public static class unique_numb {
@@ -29,7 +25,7 @@ public class Service_User {
             Main.user.getUsers().JSONObject(jobj.getJSONObject("user")); // create object user
             user = Main.user.getUsers();
         }
-        user.JSONObject((JSONObject) obj.get("object"));
+//        user.JSONObject((JSONObject) obj.get("object"));
 
 //        boolean result;
         switch (value) {
@@ -53,15 +49,7 @@ public class Service_User {
 
     // create request to server
     public static void createMessage(Users user, int code) {
-        operation(user, NAME_OPERATION.create);
-    }
-
-    private static void operation(Users user, int code) {
-        obj = new JSONObject();
-        obj.put("enum_object", NAME_OBJECT.user);
-        obj.put("code", code);
-        obj.put("user", user.toJSON());
-        Client_Socket.postMessage(obj);
+        operations(user, code);
     }
 
 }

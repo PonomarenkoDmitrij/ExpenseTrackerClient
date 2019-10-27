@@ -6,11 +6,12 @@ import ObjectData.CostsList;
 import Service.Service.*;
 import org.json.JSONObject;
 
-public class Service_Costs {
-    private static int value;
-    private static JSONObject obj;
+//import static Service.Service_Abs.operations;
+
+public class Service_Costs extends Service_Abs {
 
     public static class unique_numb {
+        public static final byte none = -1;
         public static final byte one_day = 11;      // show data in one day
         public static final byte seven_day = 12;    // show data in seven days
         public static final byte month = 13;        // show data in month
@@ -33,7 +34,7 @@ public class Service_Costs {
         }
     }
     // get message from server
-    public static void acceptMessage(JSONObject obj) {
+    public void acceptMessage(JSONObject obj) {
         value = obj.getInt("process");
         int unique = obj.getInt("unique");
         Costs costs = new Costs();
@@ -54,14 +55,7 @@ public class Service_Costs {
                 break;
         }
     }
-    // send message to server with create, delete, update data
-    private static void operations(Costs costs, int code) {
-        obj = new JSONObject();
-        obj.put("enum_object", NAME_OBJECT.costs);
-        obj.put("code",code);
-        if(costs != null) obj.put("costs",costs.toJSON());
-        Client_Socket.postMessage(obj);
-    }
+
     // send message to server with request for data
     public static void requestShow(Costs costs, byte code, byte unique){
         obj = new JSONObject();

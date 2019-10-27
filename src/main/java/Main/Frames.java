@@ -109,6 +109,9 @@ public class Frames {
                 case Settings:
                     root = FXMLLoader.load(getClass().getResource("/GPI/Settings.fxml"));
                     return root.lookup("#tab_pane");
+                case Main:
+                    root = FXMLLoader.load(getClass().getResource("/GPI/Main.fxml"));
+                    return root.lookup("#main_pane");
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -116,7 +119,7 @@ public class Frames {
         return null;
     }
 
-    public void centerOnScreen() {
+    private void centerOnScreen() {
         Rectangle2D primScreenBounds = Screen.getPrimary().getVisualBounds();
         homeStage.setX((primScreenBounds.getWidth() - homeStage.getWidth()) / 2);
         homeStage.setY((primScreenBounds.getHeight() - homeStage.getHeight()) / 2);
@@ -134,6 +137,7 @@ public class Frames {
     }
 
     public enum Pane {
-        Settings
+        Settings,
+        Main
     }
 }

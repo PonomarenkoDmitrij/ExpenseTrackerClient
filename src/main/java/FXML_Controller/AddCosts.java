@@ -36,7 +36,7 @@ public class AddCosts {
                          DoubleFormer.parse(travel.getText()),DoubleFormer.parse(food.getText()),DoubleFormer.parse(clothes.getText()),
                          DoubleFormer.parse(other.getText()));
                 Client_Socket.socket();
-                Service_Costs.operations(costs, Service.NAME_OPERATION.create);
+                Service_Costs.createMessage(costs, Service.NAME_OPERATION.create, Service_Costs.unique_numb.none);
                 Main.frames.closeAdd();
                 break;
             case "back":

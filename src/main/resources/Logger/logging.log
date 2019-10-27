@@ -57,3 +57,13 @@
 2019-10-13 20:33:58 INFO  Client_Socket:64 - Socket was close.
 2019-10-13 20:36:15 INFO  Client_Socket:64 - Socket was close.
 2019-10-13 20:36:20 INFO  Client_Socket:64 - Socket was close.
+2019-10-27 21:11:35 ERROR Client_Socket:58 - java.net.SocketException: Connection reset
+2019-10-27 22:02:12 ERROR Client_Socket:77 - javafx.fxml.LoadException: 
+/C:/Users/Dima/InteliJIDE%20Project/WebClient/target/classes/GPI/ExpenseTracker.fxml
+
+2019-10-27 22:02:52 ERROR Client_Socket:77 - javafx.fxml.LoadException: 
+/C:/Users/Dima/InteliJIDE%20Project/WebClient/target/classes/GPI/ExpenseTracker.fxml
+
+2019-10-27 22:03:33 ERROR Client_Socket:77 - javafx.fxml.LoadException: 
+/C:/Users/Dima/InteliJIDE%20Project/WebClient/target/classes/GPI/ExpenseTracker.fxml
+
