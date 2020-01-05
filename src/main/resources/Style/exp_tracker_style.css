@@ -28,14 +28,17 @@
     -fx-border-style: solid;
     -fx-border-color: rgba(255,255,255,0.2);
 }
-.button , .choice-box{
-     -fx-background-radius: 15px;
-     -fx-background-color: rgba(49, 69, 116, 0.2);
-     -fx-border-color: rgba(255,255,255,0.2);
-     -fx-border-style: solid;
-     -fx-background-radius: 7em;
-     -fx-border-radius: 7em;
- }
+
 .data-anchor{
     -fx-background-color: rgba(255, 191, 217, 0);
 }
+
+.general-anchor > .button , .choice-box{
+    -fx-background-radius: 15px;
+    -fx-background-color: rgba(49, 69, 116, 0.2);
+    -fx-border-color: rgba(255,255,255,0.2);
+    -fx-border-style: solid;
+    -fx-background-radius: 7em;
+    -fx-border-radius: 7em;
+}
+

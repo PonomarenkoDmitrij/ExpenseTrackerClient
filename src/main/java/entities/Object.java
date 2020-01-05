@@ -1,8 +1,8 @@
-package ObjectData;
+package entities;
 
 import org.json.JSONObject;
 
-public class Object extends AbsObject {
+public class Object {
 
     public int id;
 

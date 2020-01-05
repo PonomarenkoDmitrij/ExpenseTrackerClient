@@ -2,15 +2,11 @@ package FXML_Controller;
 
 import Form.DoubleFormer;
 import Main.*;
-import ObjectData.*;
-import Service.Service;
-import Service.Service_Costs;
+import entities.*;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
-
-import java.util.Date;
 
 public class AddCosts {
 
@@ -31,12 +27,10 @@ public class AddCosts {
         Button b = (Button) e.getSource();
         switch (b.getId()){
             case "add":
-                 costs = new Costs(-1, Main.user.users.id,-1,-1,-1,
-                         (total_money.getText()!= null)?DoubleFormer.parse(total_money.getText()):-1,
-                         DoubleFormer.parse(travel.getText()),DoubleFormer.parse(food.getText()),DoubleFormer.parse(clothes.getText()),
-                         DoubleFormer.parse(other.getText()));
-                Client_Socket.socket();
-                Service_Costs.createMessage(costs, Service.NAME_OPERATION.create, Service_Costs.unique_numb.none);
+//                 costs = new Costs(-1, Main.user.users.getid,-1,-1,-1,
+//                         (total_money.getText()!= null)?DoubleFormer.parse(total_money.getText()):-1,
+//                         DoubleFormer.parse(travel.getText()),DoubleFormer.parse(food.getText()),DoubleFormer.parse(clothes.getText()),
+//                         DoubleFormer.parse(other.getText()));
                 Main.frames.closeAdd();
                 break;
             case "back":

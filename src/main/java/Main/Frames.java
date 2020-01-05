@@ -14,7 +14,7 @@ import java.io.IOException;
 
 public class Frames {
 
-    final static Logger LOGGER = Logger.getLogger(Client_Socket.class);
+    final static Logger LOGGER = Logger.getLogger(Frames.class);
 
     private Stage homeStage;
     Parent root = null;
@@ -100,18 +100,20 @@ public class Frames {
         }
     }
 
+    Parent root_assist;
+
     // load new component
     public Node loadNode(Pane pane) {
         try {
-            Parent root;
 
             switch (pane) {
                 case Settings:
-                    root = FXMLLoader.load(getClass().getResource("/GPI/Settings.fxml"));
-                    return root.lookup("#tab_pane");
+                    root_assist = FXMLLoader.load(getClass().getResource("/GPI/Settings.fxml"));
+//                    root_assist.
+                    return root_assist.lookup("#tab_pane");
                 case Main:
-                    root = FXMLLoader.load(getClass().getResource("/GPI/Main.fxml"));
-                    return root.lookup("#main_pane");
+                    root_assist = FXMLLoader.load(getClass().getResource("/GPI/Main.fxml"));
+                    return root_assist.lookup("#main_pane");
             }
         } catch (IOException e) {
             e.printStackTrace();

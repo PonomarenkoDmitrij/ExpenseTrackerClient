@@ -14,13 +14,12 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 
 
-
-public class ExpenseTracker implements Controller {
-//    ObservableList<String> langs = FXCollections.observableArrayList("1 day", "7 days", "30 days");
-//
-//    @FXML
-//    private ChoiceBox<String> choice_box;
-//    private Button add;
+public class ExpenseTracker {
+    ObservableList<String> langs = FXCollections.observableArrayList("1 day", "7 days", "30 days");
+    @FXML
+    private ChoiceBox<String> choice_box;
+    @FXML
+    private Button add;
 
     @FXML
     private AnchorPane apane;
@@ -28,17 +27,18 @@ public class ExpenseTracker implements Controller {
 
     @FXML
     public void initialize() {
-        apane.getChildren().add(Main.frames.loadNode(Frames.Pane.Main));
+        button();
     }
 
     public void click(ActionEvent e) {
         Button b = (Button) e.getSource();
         switch (b.getId()) {
             case "main_menu":
+                button();
                 Main.frames.frames(Frames.NumbFrame.ExpTracker);
                 break;
             case "settings":
-//                apane.getChildren().removeAll(add, choice_box);
+                apane.getChildren().removeAll(add, choice_box);
                 apane.getChildren().add(Main.frames.loadNode(Frames.Pane.Settings));
                 break;
             case "person":
@@ -47,32 +47,34 @@ public class ExpenseTracker implements Controller {
 
     }
 
-//    private void button() {
-//        ImageView im = new ImageView(new Image("Icons/plus.png"));
-//        im.setFitHeight(17);
-//        im.setFitWidth(23);
-//
-//        add = new Button("Add");
-//        add.setGraphic(im);
-//        add.setLayoutX(452);
-//        add.setLayoutY(14);
-//        add.setMinWidth(44);
-//        add.setOnAction(new EventHandler<ActionEvent>() {
-//            @Override
-//            public void handle(ActionEvent event) {
-//                Main.frames.frames(Frames.NumbFrame.Add);
-//            }
-//        });
-//
-//
-//        choice_box = new ChoiceBox<String>();
-//        choice_box.setItems(langs);
-//        choice_box.setValue("1 day");
-//        choice_box.setLayoutX(14);
-//        choice_box.setLayoutY(15);
-//
-//
-//        apane.getChildren().addAll(add, choice_box);
-//    }
+    private void button() {
+        ImageView im = new ImageView(new Image("Icons/plus.png"));
+        im.setFitHeight(17);
+        im.setFitWidth(23);
+
+        add = new Button("Add");
+        add.setId("add");
+        add.setGraphic(im);
+        add.setLayoutX(490);
+        add.setLayoutY(14);
+        add.setMinWidth(60);
+        add.setPrefWidth(100);
+        add.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                Main.frames.frames(Frames.NumbFrame.Add);
+            }
+        });
+
+
+        choice_box = new ChoiceBox<String>();
+        choice_box.setItems(langs);
+        choice_box.setValue("1 day");
+        choice_box.setLayoutX(14);
+        choice_box.setLayoutY(15);
+
+
+        apane.getChildren().addAll(add, choice_box);
+    }
 
 }

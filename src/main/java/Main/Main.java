@@ -1,6 +1,7 @@
 package Main;
 
-import ObjectData.User;
+import entities.CostsList;
+import entities.User;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -13,6 +14,7 @@ public class Main extends Application {
     private static Stage homeStage;
     public static Frames frames = null;
     public static User user = new User();
+    public static CostsList costsList = new CostsList();
 
     public static void main(String[] args) {
         launch(args);
@@ -21,7 +23,7 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         homeStage = primaryStage;
-        Parent root = FXMLLoader.load(getClass().getResource("/GPI/Verification.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/GPI/ExpenseTracker.fxml"));
         homeStage.setTitle("Expense tracker");
         homeStage.getIcons().add(new Image("/Icons/main_icon.jpg"));
         homeStage.setScene(new Scene(root));

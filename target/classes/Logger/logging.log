@@ -67,3 +67,8 @@
 2019-10-27 22:03:33 ERROR Client_Socket:77 - javafx.fxml.LoadException: 
 /C:/Users/Dima/InteliJIDE%20Project/WebClient/target/classes/GPI/ExpenseTracker.fxml
 
+2019-10-28 09:57:01 ERROR Client_Socket:58 - java.net.SocketException: Connection reset
+2019-10-28 09:59:57 ERROR Client_Socket:58 - java.net.SocketException: Connection reset
+2019-11-10 20:31:05 ERROR Client_Socket:44 - java.net.ConnectException: Connection refused: connect
+2019-11-10 20:31:52 ERROR Client_Socket:44 - java.net.ConnectException: Connection refused: connect
+2019-11-10 21:30:26 ERROR Client_Socket:63 - java.net.SocketException: Connection reset

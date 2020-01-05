@@ -7,4 +7,8 @@ public class IntegerFormer {
         return Integer.parseInt(str);
     }
 
+    public static String parseInt(int numb){
+        return String.valueOf(numb);
+    }
+
 }

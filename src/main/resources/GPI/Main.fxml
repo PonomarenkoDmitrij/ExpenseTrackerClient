@@ -4,7 +4,7 @@
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane fx:id="main_pane" prefHeight="687.0" prefWidth="688.0" xmlns="http://javafx.com/javafx/8.0.181" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FXML_Controller.Main_Controller">
+<AnchorPane fx:id="main_pane" prefHeight="687.0" prefWidth="688.0" stylesheets="@../Style/main.css" xmlns="http://javafx.com/javafx/8.0.181" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FXML_Controller.Main_Controller">
    <children>
       <Button fx:id="add" layoutX="546.0" layoutY="35.0" mnemonicParsing="false" onAction="#click" text="Button" />
       <ChoiceBox fx:id="choice_box" layoutX="45.0" layoutY="35.0" prefWidth="150.0" />

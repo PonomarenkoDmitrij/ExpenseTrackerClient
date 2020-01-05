@@ -1,8 +1,5 @@
 package Dictionary;
 
-import Service.*;
-import Service.Service.*;
-import Service.Service_User.*;
 
 public class Dict_ENG {
 
@@ -24,16 +21,6 @@ public class Dict_ENG {
     };
 
     public static String getMessUser(int code, boolean result){
-        switch (code) {
-            case unique_numb.verification:
-                return message_user[result ? 0 : 1][0];
-            case NAME_OPERATION.create:
-                return message_user[result ? 0 : 1][1];
-            case NAME_OPERATION.update:
-                return message_user[result ? 0 : 1][2];
-            case NAME_OPERATION.delete:
-                return message_user[result ? 0 : 1][3];
-        }
         return null;
     }
 
